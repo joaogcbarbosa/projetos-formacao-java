@@ -13,12 +13,8 @@ class Pilha {
     }
 
     void push(No novoNo) {
-        if (this.isEmpty()) {
-            this.proximoTopo = novoNo;
-        } else {
-            novoNo.proximo = this.proximoTopo;
-            this.proximoTopo = novoNo;
-        }
+        novoNo.proximo = this.proximoTopo;
+        this.proximoTopo = novoNo;
     }
 
     void pop() {
