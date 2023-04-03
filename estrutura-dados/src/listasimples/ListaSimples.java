@@ -1,18 +1,18 @@
 package listasimples;
 
-public class ListaSimples {
+class ListaSimples {
 
     private No primeiro;
     private No ultimo;
     private int numeroNos;
 
-    public ListaSimples() {
+    ListaSimples() {
         this.primeiro = null;
         this.ultimo = null;
         this.numeroNos = 0;
     }
 
-    public void insereNoInicio(No novoNo) {
+    void insereNoInicio(No novoNo) {
         if (this.primeiro == null) {
             this.primeiro = novoNo;
             this.ultimo = novoNo;
@@ -23,7 +23,7 @@ public class ListaSimples {
         }
     }
 
-    public void insereNoFim(No novoNo) {
+    void insereNoFim(No novoNo) {
         if (this.primeiro == null) {
             this.primeiro = novoNo;
             this.ultimo = novoNo;
@@ -35,7 +35,7 @@ public class ListaSimples {
         }
     }
 
-    public void insereNoPosicao(No novoNo, int posicao) {
+    void insereNoPosicao(No novoNo, int posicao) {
         No noAuxiliar = primeiro;
         int numeroNos = this.contarNos();
         int posAux;
@@ -60,7 +60,7 @@ public class ListaSimples {
 
     }
 
-    public String buscaNo(int valor) {
+    String buscaNo(int valor) {
         No noAuxiliar = primeiro;
         int posicao = 0;
         while (noAuxiliar != null) {
@@ -73,7 +73,7 @@ public class ListaSimples {
         return null;
     }
 
-    public void excluiNo(int valor) {
+    void excluiNo(int valor) {
         No noAuxiliar = primeiro;
         No noAuxiliarAnterior;
         while (noAuxiliar != null) {
@@ -86,7 +86,7 @@ public class ListaSimples {
         }
     }
 
-    public int contarNos() {
+    int contarNos() {
         int tamanho = 0;
         No noAuxiliar = primeiro;
         while (noAuxiliar != null) {
@@ -96,7 +96,7 @@ public class ListaSimples {
         return tamanho;
     }
 
-    public void exibeLista(){
+    void exibeLista(){
         No noAuxiliar = primeiro;
         int i = 0;
         while(noAuxiliar != null) {
